@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+    font-family: 'Lato',sans-serif;
+    overflow: hidden;
+    user-select: none;
+  }
+  nav .logo{
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 70px;
+    padding-left: 110px;
+  }
+  nav{
+    height: 70px;
+    background: #000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  }
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+  }
+  nav ul li a{
+    color: white;
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    font-size: 20px;
+    background: #000;
+    transition: .5s;
+  }
+  nav ul li a:hover,
+  nav ul li a.active{
+    color: #23dbdb;
+  }
+  nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #23dbdb;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+  nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid #042331;
+    border-top: none;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+  }
+  nav ul ul li a i{
+    margin-left: 45px;
+  }
+  section{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  @media (max-width: 950px){
+    nav .logo{
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-left: 20px;
+  }
+  nav{
+    height: 60px;
+    background: #000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  }
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+  }
+  nav ul li a{
+    color: white;
+    display: block;
+    padding: auto;
+    line-height: 60px;
+    font-size: 16px;
+    background: #000;
+    transition: .5s;
+  }
+  nav ul li a:hover,
+  nav ul li a.active{
+    color: #ea0053;
+  }
+  nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #ea0053;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li:hover > ul{
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+  nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid #042331;
+    border-top: none;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+  nav ul ul li a i{
+    margin-left: 45px;
+  }
+  section{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  #contents h2{
+    border-color: #ea0053;
+    }
+  }
+  
+  @media (max-width: 800px){
+    nav .logo{
+    /*color: white;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-left: 20px;*/
+      display: none;
+  }
+  nav{
+    height: 60px;
+    background: #000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  }
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+  }
+  nav ul li a{
+    color: white;
+    display: block;
+    padding: auto;
+    line-height: 60px;
+    font-size: 16px;
+    background: #000;
+    transition: .5s;
+  }
+  nav ul li a:hover,
+  nav ul li a.active{
+    color: #23dbdb;
+  }
+  nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #23dbdb;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li:hover > ul{
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+  nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid #042331;
+    border-top: none;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+  nav ul ul li a i{
+    margin-left: 45px;
+  }
+  section{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  }
+  
+  #header{
+    height: 370px;
+  }
+  .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .hero {
+    z-index: -1;
+    background-image: url(https://phantom-marca.unidadeditorial.es/70228d12abae7a8e9afee7a18198736c/resize/1320/f/jpg/assets/multimedia/imagenes/2022/03/29/16485483154853.jpg);
+      clear: left;
+      background-position: left center;
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      width: 100%;
+      height:  300px;
+      background-size: cover;
+    margin-bottom:15px; 
+  }
+  
+  #contents {
+      margin-top: 5px;
+      padding: 3%;
+  }
+  #contents h2 {
+      clear: both;
+      margin-bottom: 20px;
+      font-size: 120%;
+      background: #000;
+      color: #fff;
+      border-left: 50px solid #23dbdb;
+      line-height: 50px;
+      padding-left: 30px;
+  }
+  
+  
