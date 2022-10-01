@@ -5,19 +5,7 @@ import  "./home.css"
 import SearchBar from "./SearchBar";
 export default function Home(){
     const [isLoading, setIsLoading] = useState(false);
-  const [options, setOptions] = useState([]);
-  const SEARCH_URI = 'https://api.github.com/search/users';
-  const handleSearch = (query: string) => {
-    setIsLoading(true);
-
-    fetch(`${SEARCH_URI}?q=${query}+in:login&page=1&per_page=50`)
-      .then((resp) => resp.json())
-      .then(({ items }: Response) => {
-        setOptions(items);
-        setIsLoading(false);
-      });
-  };
-  const filterBy = () => true;
+  const [results,setResults]=useState()
 
     return(
         <>
@@ -60,22 +48,37 @@ export default function Home(){
 
 
   <div className="hero">
+    {/* {JSON.stringify(results)} */}
     <div className="title">
         <Row className="p-0 m-0">
             <Col md={2}></Col>
-            <Col md={8}><SearchBar /></Col>
+            <Col md={8}><SearchBar results={results} setResults={setResults}/></Col>
             <Col md={2}></Col>
         </Row>
 </div>
   </div> </div>
+      <Row className="p-0 m-0">
+        <Col md={2}></Col>
+        <Col md={8}>
+        <div id="contents">
+      <h2>Search results({results&&results.length})</h2>
+      {
+        results&&results._source.map(item=><>
+          <p style={{fontSize:"11px"}} className="m-0">{item.link}</p>
+      <h4 className="sub-heading m-0">{item.title}</h4>
+      <p><span style={{color:"rgb(92, 89, 89)"}}>5 days ago — </span>{item.description}.....</p>
+      <br />
+        </>)
+      }
+    
       
-    <div id="contents">
-      <h2>Search results(0)</h2>
-      
-      <p>https://developer.mozilla.org › References › CSS</p>
-      <h3>content - CSS: Cascading Style Sheets - MDN Web Docs</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
+        </Col>
+        <Col md={2}></Col>
+   
+    </Row>
+    
+    
         </>
     )
 }
