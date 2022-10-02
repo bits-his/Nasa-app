@@ -22,7 +22,7 @@ function SignUp() {
 
   const handleAdd = (e) => {
     console.log(form);
-    fetch("http://nasa-space-gateway.herokuapp.com/api/users/create", {
+    fetch("https://nasa-space-gateway.herokuapp.com/api/users/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

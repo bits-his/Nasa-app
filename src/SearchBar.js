@@ -20,7 +20,7 @@ export default function SearchBar({ results = [], setResults }) {
     setIsLoading(true);
     console.log(form);
     fetch(
-      `http://nasa-space-gateway.herokuapp.com/api/search/resources/${form.search}`,
+      `https://nasa-space-gateway.herokuapp.com/api/search/resources/${form.search}`,
       {
         method: "GET",
         headers: {
