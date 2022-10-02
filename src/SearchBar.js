@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 // import { Search } from "react-feather";
 import { Button, Input, InputGroup } from "reactstrap";
 import "./search.css";
