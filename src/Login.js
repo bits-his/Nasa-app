@@ -32,7 +32,7 @@ function SingIn() {
             .then(data => {
                 localStorage.setItem("@@_data",JSON.stringify(data));
                  alert("sucess")
-                 navigate("/")
+                 navigate("/profile")
 
                
               })

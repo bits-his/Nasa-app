@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Bookmark, ChevronDown, ChevronUp } from "react-feather";
+import { Bookmark, ChevronDown, ChevronUp, Mic } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import "./home.css";
@@ -65,7 +65,7 @@ export default function Home() {
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0"><Bookmark size={20} color="grey" />{item._source.title}</h4>
+                  <h4 className="sub-heading m-0" ><a href={item.link} target="_blank">{item._source.title}</a></h4>
                   {/* ⭐⭐⭐ */}
                   <p>
                     <span style={{ color: "rgb(92, 89, 89)" }}>
@@ -74,6 +74,11 @@ export default function Home() {
                     {item._source.description}
                   </p>
                   <br />
+                </div>
+                <div style={{marginLeft:'5px'}}>
+                <Bookmark size={20} color="grey" />
+                <div style={{marginLeft:'3px',color:"white"}}>{item.vote}</div>
+                <Mic size={20} color="grey" />
                 </div>
               </div>
             ))}
