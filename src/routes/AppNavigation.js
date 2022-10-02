@@ -1,5 +1,6 @@
 
 import {  useRoutes } from "react-router-dom";
+import Eley from "../Form";
 import Home from "../Home";
 import SingIn from "../Login";
 import SignUp from "../Signup";
@@ -9,6 +10,7 @@ function AppNavigation() {
     { path: "/", element: <Home /> },
     { path: "/login", element: <SingIn /> },
     { path: '/sign-up', element: <SignUp /> },
+    { path: '/publish', element: <Eley /> },
     {
       path: "app",
       element: <Home />,

@@ -1,27 +1,32 @@
 import React, { useState } from "react";
 import { Bookmark, ChevronDown, ChevronUp } from "react-feather";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import "./home.css";
 import SearchBar from "./SearchBar";
 export default function Home() {
   const [results, setResults] = useState();
-
+ const navigate = useNavigate()
   return (
     <>
       <div id="header">
         <nav>
           <label className="logo">Space Gateway</label>
           <ul>
+          <li>
+              <span onClick={()=>navigate("/publish")} style={{ textDecoration: "none" }}>
+                Publish
+              </span>
+            </li>
             <li>
-              <span href="#" style={{ textDecoration: "none" }}>
+              <span onClick={()=>navigate("/sign-up")} style={{ textDecoration: "none" }}>
                 Sign Up
                 <i className="fas fa-caret-down"></i>
               </span>
               <ul></ul>
             </li>
             <li>
-              <span href="#" style={{ textDecoration: "none" }}>
+              <span onClick={()=>navigate("/login")} style={{ textDecoration: "none" }}>
                 Login
               </span>
             </li>
@@ -36,36 +41,30 @@ export default function Home() {
         <Col md={2} />
       </Row>
 
-      <Row className="p-0 mt-3">
-        <Col md={2}></Col>
+      <Row className="p-0 mt-3 m-0">
+        <Col md={2} xs={0} sm={0}></Col>
         <Col md={8}>
           {results &&
             results.map((item, index) => (
-              <div className="row">
-                <div className="col-md-1">
-                  <Row>
+              <div className="d-flex">
+                
+                {/* <div className="col-md-8 col-xs-9 col-sm-9"> */}
+                <div style={{marginRight:'5px'}} >
+
                     <ChevronUp size={27} color="grey" />
-                  </Row>
-                  <div className="text-center">{item.vote}</div>
-                  <Row>
+                  
+                  <div style={{marginLeft:'7px'}}>{item.vote}</div>
+                 
                     <ChevronDown size={27} color="grey" />{" "}
-                  </Row>
-                  <Row>
-                    <Bookmark size={27} color="grey" />{" "}
-                  </Row>
-                </div>
-                <div className="col-md-8">
+                 
+                  
+
+                  </div>
+                  <div>
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4
-                    className="sub-heading m-0"
-                    onClick={() => {
-                      window.location.replace(item._source.link);
-                    }}
-                  >
-                    {item._source.title}
-                  </h4>
+                  <h4 className="sub-heading m-0"><Bookmark size={20} color="grey" />{item._source.title}</h4>
                   {/* ⭐⭐⭐ */}
                   <p>
                     <span style={{ color: "rgb(92, 89, 89)" }}>
@@ -78,7 +77,7 @@ export default function Home() {
               </div>
             ))}
         </Col>
-        <Col md={2}></Col>
+        <Col md={2} xs={0} sm={0}></Col>
       </Row>
     </>
   );
