@@ -1,11 +1,15 @@
 import React, { useState } from "react"
 import { AsyncTypeahead } from "react-bootstrap-typeahead";
+import { useNavigate } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import  "./home.css"
+import SingIn from "./Login";
 import SearchBar from "./SearchBar";
+import SignUp from "./Signup";
 export default function Home(){
     const [isLoading, setIsLoading] = useState(false);
   const [results,setResults]=useState()
+  const navigate = useNavigate()
 
     return(
         <>
@@ -21,9 +25,9 @@ export default function Home(){
 
 </ul>
 </li> */}
-<li><a href="#" style={{textDecoration:"none"}}>Sign Up
+<li><span onClick={()=>navigate("/sign-up")} style={{textDecoration:"none"}}>Sign Up
           <i className="fas fa-caret-down"></i>
-        </a>
+        </span>
           <ul>
 {/* <li><a href="#">Front End</a></li>
 <li><a href="#">Back End</a></li>
@@ -38,7 +42,7 @@ export default function Home(){
 </li> */}
 </ul>
 </li>
-<li><a href="#" style={{textDecoration:"none"}}>Login</a></li>
+<li><span onClick={()=>navigate("/sign-up")} style={{textDecoration:"none"}}>Login</span></li>
 <li><a href="#" ><i className="fab fa-facebook-f"></i></a></li>
 <li><a style={{paddingLeft: 0}} href="#"><i className="fab fa-twitter"></i></a></li>
 <li><a style={{paddingLeft: 0}} href="#"><i className="fab fa-instagram"></i></a></li>
@@ -73,6 +77,7 @@ export default function Home(){
     
       
     </div>
+   
         </Col>
         <Col md={2}></Col>
    
