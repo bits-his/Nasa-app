@@ -1,15 +1,13 @@
 // import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useCallback, useEffect, useState } from 'react';
-import { BrowserRouter, Link, Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom';
-import Footer from './components/footer/Footer';
+import { useCallback, useEffect } from 'react';
+import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
 import Registration from "./components/Auth/Registration";
 import LandingPage from "./components/landing-page/LandingPage";
 // import Homeroom from "./components/page/home/Homeroom";
 import Resume from "./components/page/Resume";
 import ViewProfile from './components/page/ViewProfile';
 import Homeroom from './components/page/home/Homeroom';
-import { getRegistration } from './components/redux/action/Register';
 import CreateJob from './components/page/job/CreateJob';
 import AdminIndex from './components/adminDashbord/AdminIndex';
 import SearchJob from './components/page/browseJobs/SearchJob';
@@ -17,19 +15,15 @@ import JobPostList from './components/page/job/JobPostList';
 import ApplyJob from './components/page/browseJobs/ApplyJob';
 import { useDispatch, useSelector } from "react-redux";
 import { initUser } from './components/redux/action/auth';
-import TestResume from './components/page/TestResume';
 import PdfView from './components/adminDashbord/PdfView';
-import { canUseThis, hasAccess, hasRole } from './components/AuthHelper';
 
 const App = ({ contract, currentUser, nearConfig, wallet }) => {
   const history = useHistory()
   const location = useLocation()
-  const [result, setResult] = useState([])
   // const userDetail = JSON.parse(localStorage.getItem("@@__token"))
 
   const dispatch = useDispatch();
   const access = useSelector((state) => state.auth.user.role);
-  const user = useSelector((state) => state.auth.user);
   const RouteAccess = access && location.pathname.includes('/')
   // let access = localStorage.getItem("authenticate");
   console.log(RouteAccess)
