@@ -39,21 +39,21 @@ function SignUp() {
       .then((err) => console.log(err));
     setForm(_form);
   };
-  
+
   const options = [
     {
-        name:"publisher"
+      name: "publisher",
     },
     {
-        name:"researcher"
+      name: "researcher",
     },
     {
-        name:"scientist"
+      name: "scientist",
     },
     {
-        name:"student"
-    }
-  ]
+      name: "student",
+    },
+  ];
   return (
     <div className="new">
       <Row className="m-0 p-0">
@@ -76,7 +76,7 @@ function SignUp() {
                       name="name"
                       value={form.name}
                       onChange={handleChange}
-                    />
+                    />  
                   </Col>
                   <Col md={12}>
                     <Label style={{ color: "white" }}>User Name</Label>
@@ -91,29 +91,31 @@ function SignUp() {
                   <Col md={12}>
                     <Label style={{ color: "white" }}>Role</Label>
                     <Typeahead
-          id="basic-typeahead-single"
-          labelKey="name"
-          options={options}
-          onInputChange={(e) => {
-            const select = e[0]
-            if(e.length){
-            setForm((p) =>({
-                ...p, role : select.name
-               }) ) 
-            }
-          }}
-          onChange={(e) => {
-            const select = e[0]
-            // alert(JSON.stringify(select))
-            if(e.length){
-setForm((p) =>({
-                ...p, role : select.name
-               }) ) 
-            }
-          }}
-          placeholder="Choose a Role..."
-        //   selected={singleSelections}
-        />
+                      id="basic-typeahead-single"
+                      labelKey="name"
+                      options={options}
+                      onInputChange={(e) => {
+                        const select = e[0];
+                        if (e.length) {
+                          setForm((p) => ({
+                            ...p,
+                            role: select.name,
+                          }));
+                        }
+                      }}
+                      onChange={(e) => {
+                        const select = e[0];
+                        // alert(JSON.stringify(select))
+                        if (e.length) {
+                          setForm((p) => ({
+                            ...p,
+                            role: select.name,
+                          }));
+                        }
+                      }}
+                      placeholder="Choose a Role..."
+                      //   selected={singleSelections}
+                    />
                   </Col>
 
                   <Col md={12}>
@@ -160,7 +162,15 @@ setForm((p) =>({
                   </center>
 
                   <center>
-                    <p on style={{ fontSize: 12, marginTop: "1rem" ,cursor:"pointer"}} onClick={()=>navigate("/login")}>
+                    <p
+                      on
+                      style={{
+                        fontSize: 12,
+                        marginTop: "1rem",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => navigate("/login")}
+                    >
                       Already have an account?
                       <span
                         style={{ fontSize: 12, cursor: "pointer" }}
