@@ -49,7 +49,7 @@ function SingIn() {
             <Card className="p-5 m-1 signin-card" style={{ borderRadius: 10, }}>
                 <center><h3 className="signup">Sign In</h3></center>
                 <hr></hr>
-                <Row>
+                <Row className="m-0 p-0">
                     <Col md={1}></Col>
                     <Col md={10}>
 

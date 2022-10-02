@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Search } from "react-feather";
+import React, { useEffect, useState } from "react";
+// import { Search } from "react-feather";
 import { Button, Input, InputGroup } from "reactstrap";
 import "./search.css";
 
 export default function SearchBar({ results = [], setResults }) {
   const [isLoading, setIsLoading] = useState(false);
   const [form, setForm] = useState({
-    search: "",
+    search: "EARTH CRUST",
   });
 
   // const upVote = () => {
@@ -38,19 +38,23 @@ export default function SearchBar({ results = [], setResults }) {
         setResults(arr);
       });
   };
+  useEffect(()=>{
+    handleSubmit()
+  })
   return (
     <div>
       <InputGroup>
-        <Button style={{ backgroundColor: "white" }}>
+        {/* <Button style={{ backgroundColor: "white" }}>
           <Search color="grey" />
-        </Button>
+        </Button> */}
         <Input
           placeholder="Sear For Space..."
           name="search"
-          value={form.search}
+          value={form.search === "EARTH CRUST" ? "":form.search}
           onChange={handleChange}
+          className="col-md-12"
         />
-        <Button isLoading={isLoading} color="primary" onClick={handleSubmit}>
+        <Button isLoading={isLoading} style={{ backgroundColor: "black" }} onClick={handleSubmit}>
           Search
         </Button>
       </InputGroup>

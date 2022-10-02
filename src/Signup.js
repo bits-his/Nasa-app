@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Typeahead } from "react-bootstrap-typeahead";
 import { useNavigate } from "react-router-dom";
 import { Button, Card, Col, Input, Label, Row } from "reactstrap";
 import "./sigup.css";
@@ -38,9 +39,24 @@ function SignUp() {
       .then((err) => console.log(err));
     setForm(_form);
   };
+  
+  const options = [
+    {
+        name:"publisher"
+    },
+    {
+        name:"researcher"
+    },
+    {
+        name:"scientist"
+    },
+    {
+        name:"student"
+    }
+  ]
   return (
     <div className="new">
-      <Row>
+      <Row className="m-0 p-0">
         <Col md={4}></Col>
         <Col md={4}>
           <div className="body bodys">
@@ -74,16 +90,30 @@ function SignUp() {
                   </Col>
                   <Col md={12}>
                     <Label style={{ color: "white" }}>Role</Label>
-                    <Input
-                      type="select"
-                      placeholder="Enter your name"
-                      name="role"
-                      value={form.role}
-                      onChange={handleChange}
-                    >
-                      <option>------------Select----------</option>
-                      <option>publisher</option>
-                    </Input>
+                    <Typeahead
+          id="basic-typeahead-single"
+          labelKey="name"
+          options={options}
+          onInputChange={(e) => {
+            const select = e[0]
+            if(e.length){
+            setForm((p) =>({
+                ...p, role : select.name
+               }) ) 
+            }
+          }}
+          onChange={(e) => {
+            const select = e[0]
+            // alert(JSON.stringify(select))
+            if(e.length){
+setForm((p) =>({
+                ...p, role : select.name
+               }) ) 
+            }
+          }}
+          placeholder="Choose a Role..."
+        //   selected={singleSelections}
+        />
                   </Col>
 
                   <Col md={12}>
@@ -98,7 +128,7 @@ function SignUp() {
                   </Col>
 
                   <Col md={12}>
-                    <Label>Password</Label>
+                    <Label style={{ color: "white" }}>Password</Label>
                     <Input
                       type="password"
                       placeholder="Enter your  password"
@@ -109,7 +139,7 @@ function SignUp() {
                   </Col>
 
                   <Col md={12}>
-                    <Label>Comfirm Password</Label>
+                    <Label style={{ color: "white" }}>Comfirm Password</Label>
                     <Input
                       type="password"
                       placeholder="Enter your  password"
@@ -130,7 +160,7 @@ function SignUp() {
                   </center>
 
                   <center>
-                    <p style={{ fontSize: 12, marginTop: "1rem" }}>
+                    <p on style={{ fontSize: 12, marginTop: "1rem" ,cursor:"pointer"}} onClick={()=>navigate("/login")}>
                       Already have an account?
                       <span
                         style={{ fontSize: 12, cursor: "pointer" }}
