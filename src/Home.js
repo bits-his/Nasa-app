@@ -34,10 +34,13 @@ export default function Home() {
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0" onClick={()=>{
-                       window.location.replace(item._source.link);
-                    }}>
-                    <Bookmark size={20} color="grey"  />
+                  <h4
+                    className="sub-heading m-0"
+                    onClick={() => {
+                      window.location.replace(item._source.link);
+                    }}
+                  >
+                    <Bookmark size={20} color="grey" />
                     {item._source.title}
                   </h4>
                   {/* ⭐⭐⭐ */}
@@ -58,7 +61,8 @@ export default function Home() {
   );
 }
 
-export const HeaderSpace = ({ navigate  }) => {
+export const HeaderSpace = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div id="header">
@@ -67,16 +71,16 @@ export const HeaderSpace = ({ navigate  }) => {
             <div
               style={{ cursor: "pointer" }}
               onClick={() => {
-                navigate("/live");
+                navigate("/");
               }}
             >
               Space Gateway
             </div>
           </label>
           <ul>
-          <li>
+            <li>
               <span
-                onClick={() => navigate("/publish")}
+                onClick={() => navigate("/live")}
                 style={{ textDecoration: "none" }}
               >
                 Live stream
