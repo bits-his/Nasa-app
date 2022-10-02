@@ -28,7 +28,7 @@ export default function Home() {
       <HeaderSpace navigate={navigate} />
       <Row className="m-0 p-0">
         <Col md={2}>
-          <h6 >Training Catolog</h6>
+          <h6>Training Catolog</h6>
           <Accordion open={open} toggle={toggle}>
             <AccordionItem>
               <AccordionHeader targetId="1" style={{ fontSize: "3px" }}>
@@ -219,6 +219,14 @@ export const HeaderSpace = ({ navigate }) => {
                 style={{ textDecoration: "none", cursor: "pointer" }}
               >
                 Live stream
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => navigate("/profile")}
+                style={{ textDecoration: "none", cursor: "pointer" }}
+              >
+                Profile
               </span>
             </li>
             <li>
