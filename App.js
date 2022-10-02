@@ -249,6 +249,20 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
           )}
         />
 
+<Route
+          exact
+          path="/pagination"
+          render={(props) => (
+            <PdfView
+              {...props}
+              nearConfig={nearConfig}
+              wallet={wallet}
+              contract={contract}
+              currentUser={currentUser}
+            />
+          )}
+        />
+
       </Switch>
       {/* <Footer /> */}
     </>
