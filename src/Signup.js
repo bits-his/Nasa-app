@@ -61,6 +61,14 @@ function SignUp() {
         <Col md={8}>
           <div className="p-3">
             <Card className="p-5 m-1 signin-card" style={{ borderRadius: 10 }}>
+            <center
+                    className="mt-1 sub-heading m-0"
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                  >
+                    Back
+                  </center>
               <center>
                 <h3 className="signup">Sign Up</h3>
               </center>
@@ -189,6 +197,7 @@ function SignUp() {
         </Col>
         <Col md={2}></Col>
       </Row>
+      
     </div>
   );
 }
