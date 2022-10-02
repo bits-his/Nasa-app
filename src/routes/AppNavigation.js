@@ -14,6 +14,7 @@ function AppNavigation() {
     { path: '/sign-up', element: <SignUp /> },
     { path: '/publish', element: <Eley /> },
     { path: '/live', element: <LiveStream /> },
+    { path: '/profile', element: <Profile /> },
     {
       path: "app",
       element: <Home />,

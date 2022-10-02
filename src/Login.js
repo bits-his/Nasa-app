@@ -37,8 +37,8 @@ function SingIn() {
   };
   return (
     <div className="new">
-      <HeaderSpace />
-      <Row className="p-0 ">
+      <HeaderSpace navigate={navigate}/>
+      <Row className="p-0 m-0">
         <Col md={4}></Col>
         <Col md={4} className="mt-2">
           <div className="body">

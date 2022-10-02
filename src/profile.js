@@ -1,63 +1,63 @@
 import React, { useState } from "react";
-import { Typeahead } from "react-bootstrap-typeahead";
+// import { Typeahead } from "react-bootstrap-typeahead";
 import { Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";
-import { Button, Card, Col, Input, Label, Row } from "reactstrap";
+import { Button, Card, Col,  Row } from "reactstrap";
 import "./sigup.css";
 import User from "./user.png"
 import "./wow.css"
 function SignUp() {
-  const _form = {
-    name: "",
-    username: "",
-    role: "",
-    last_name: "",
-    email: "",
-    password: "",
-    comfarm_password: "",
-  };
+//   const _form = {
+//     name: "",
+//     username: "",
+//     role: "",
+//     last_name: "",
+//     email: "",
+//     password: "",
+//     comfarm_password: "",
+//   };
   // const navigate = useNavigate()
-  const [form, setForm] = useState(_form);
+//   const [form, setForm] = useState(_form);
 
   const navigate = useNavigate();
-  const handleChange = ({ target: { name, value } }) =>
-    setForm((p) => ({ ...p, [name]: value }));
+//   const handleChange = ({ target: { name, value } }) =>
+//     setForm((p) => ({ ...p, [name]: value }));
 
-  const handleAdd = (e) => {
-    console.log(form);
-    fetch("https://nasa-space-gateway.herokuapp.com/api/users/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    })
-      .then((raw) => raw.json())
-      .then(() => {
-        alert("Account created successfully");
-        navigate("/");
-      })
+//   const handleAdd = (e) => {
+//     console.log(form);
+//     fetch("https://nasa-space-gateway.herokuapp.com/api/users/create", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(form),
+//     })
+//       .then((raw) => raw.json())
+//       .then(() => {
+//         alert("Account created successfully");
+//         navigate("/");
+//       })
 
-      .then((err) => console.log(err));
-    setForm(_form);
-  };
+//       .then((err) => console.log(err));
+//     setForm(_form);
+//   };
   
-  const options = [
-    {
-        name:"publisher"
-    },
-    {
-        name:"researcher"
-    },
-    {
-        name:"scientist"
-    },
-    {
-        name:"student"
-    }
-  ]
+//   const options = [
+//     {
+//         name:"publisher"
+//     },
+//     {
+//         name:"researcher"
+//     },
+//     {
+//         name:"scientist"
+//     },
+//     {
+//         name:"student"
+//     }
+//   ]
   const [state, setState] = useState();
-  const [newImage,setNewImage]=useState([])
+  const [setNewImage]=useState([])
   function handleImage(e) {
     const file = e.target.files[0]
     let reader = new FileReader()
@@ -106,12 +106,12 @@ function SignUp() {
                   state ?
                     <img
                       src={state && state}
-                      alt="`"
+                      alt="hello"
                     style={{
                       width: "190px",
                       height: "150px",
                     }}
-                    /> : <img src={User} className="rounded" /> 
+                    /> : <img src={User} className="rounded" alt="good" /> 
                 }
               </>
             </div>

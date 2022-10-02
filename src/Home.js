@@ -35,7 +35,7 @@ export default function Home() {
                     {item._source.link}
                   </p>
                   <h4 className="sub-heading m-0" >
-                    <a  href={item._source.link} target="_blank">{item._source.title}</a>
+                    <a  href={item._source.link} target="_blank" rel="noreferrer">{item._source.title}</a>
                     <Bookmark size={20} color="grey"  />
                     
                   </h4>
