@@ -28,17 +28,17 @@ export default function Home() {
       <HeaderSpace navigate={navigate} />
       <Row className="m-0 p-0">
         <Col md={2}>
+          <h3>Training Catolog</h3>
           <Accordion open={open} toggle={toggle}>
             <AccordionItem>
               <AccordionHeader targetId="1" style={{ fontSize: "3px" }}>
                 NASA RESOURCES
               </AccordionHeader>
               <AccordionBody accordionId="1">
-                <strong>This is the first item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
+                This link should automatically download a spreadsheet containing
+                all ARSET training information. If clicking on the link does not
+                begin the download, please consider copying and pasting the link
+                into a browser.
               </AccordionBody>
             </AccordionItem>
             <AccordionItem>
@@ -46,11 +46,7 @@ export default function Home() {
                 EUROPEAN SPACE AGENCY
               </AccordionHeader>
               <AccordionBody accordionId="2">
-                <strong>This is the second item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
+                European Space Agency Training and Education
               </AccordionBody>
             </AccordionItem>
             <AccordionItem>
@@ -58,11 +54,9 @@ export default function Home() {
                 COMISIÓN NACIONAL...
               </AccordionHeader>
               <AccordionBody accordionId="3">
-                <strong>This is the third item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
+                Massive Training Unit Online beginner courses on Earth
+                Observation. Instituto de Altos Estudios Espaciales Mario Gulich
+                Capacity-building opportunities offered at the institute.
               </AccordionBody>
             </AccordionItem>
             <AccordionItem>
@@ -70,23 +64,13 @@ export default function Home() {
                 CANADIAN SPACE AGENCY
               </AccordionHeader>
               <AccordionBody accordionId="4">
-                <strong>This is the third item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
-              </AccordionBody>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionHeader targetId="5">
-                BRAZILIAN SPACE AGENCY
-              </AccordionHeader>
-              <AccordionBody accordionId="5">
-                <strong>This is the third item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
+                This free e-course explains how synthetic aperture radar (SAR)
+                is used in Canada for research, development, and in operational
+                environments for mapping and environmental monitoring. SAR data
+                is very useful for environmental monitoring and responding to
+                natural disasters (notably because it can image day or night, no
+                matter the weather). It's a vital part of policy and
+                decision-makers' toolboxes.
               </AccordionBody>
             </AccordionItem>
             <AccordionItem>
@@ -94,11 +78,12 @@ export default function Home() {
                 BRAZILIAN SPACE AGENCY
               </AccordionHeader>
               <AccordionBody accordionId="6">
-                <strong>This is the third item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
+                INPE's images catalog provides a database with thousands of
+                images generated by more than 16 satellites, with resolutions
+                varying from 2 meters to 64 meters. Cameras include
+                multispectral, wide field, panchromatic, among others. All
+                images are available to the public in the linked platform, which
+                integrates search tools for filtering the database.
               </AccordionBody>
             </AccordionItem>
             <AccordionItem>
@@ -106,11 +91,9 @@ export default function Home() {
                 OTHER EXAMPLE RESOURCES
               </AccordionHeader>
               <AccordionBody accordionId="7">
-                <strong>This is the third item&#39;s accordion body.</strong>
-                You can modify any of this with custom CSS or overriding our
-                default variables. It&#39;s also worth noting that just about
-                any HTML can go within the <code>.accordion-body</code>, though
-                the transition does limit overflow.
+                The United Nations Platform for Space-based Information for
+                Disaster Management and Emergency Response (UN-SPIDER) Knowledge
+                Portal
               </AccordionBody>
             </AccordionItem>
           </Accordion>
