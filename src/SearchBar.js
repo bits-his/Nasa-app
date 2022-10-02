@@ -5,7 +5,6 @@ import "./search.css";
 
 export default function SearchBar({ results = [], setResults }) {
   const [isLoading, setIsLoading] = useState(false);
-  //   const [results,setResults]=useState([])
   const [form, setForm] = useState({
     search: "",
   });

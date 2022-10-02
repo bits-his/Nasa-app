@@ -13,16 +13,16 @@ export default function Home() {
           <label className="logo">Space Gateway</label>
           <ul>
             <li>
-              <a href="#" style={{ textDecoration: "none" }}>
+              <span href="#" style={{ textDecoration: "none" }}>
                 Sign Up
                 <i className="fas fa-caret-down"></i>
-              </a>
+              </span>
               <ul></ul>
             </li>
             <li>
-              <a href="#" style={{ textDecoration: "none" }}>
+              <span href="#" style={{ textDecoration: "none" }}>
                 Login
-              </a>
+              </span>
             </li>
           </ul>
         </nav>
@@ -39,7 +39,7 @@ export default function Home() {
         <Col md={2}></Col>
         <Col md={8}>
           {results &&
-            results.map((item,index) => (
+            results.map((item, index) => (
               <div className="row">
                 <div className="col-md-1">
                   <Row>
@@ -57,11 +57,11 @@ export default function Home() {
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0" >{item._source.title}</h4> 
+                  <h4 className="sub-heading m-0">{item._source.title}</h4>
                   {/* ⭐⭐⭐ */}
                   <p>
                     <span style={{ color: "rgb(92, 89, 89)" }}>
-                      {index+1} days ago —{" "}
+                      {index + 1} days ago —{" "}
                     </span>
                     {item._source.description}
                   </p>
