@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import "./home.css";
 import SearchBar from "./SearchBar";
+import './homeBAckground.css'
 export default function Home() {
   const [results, setResults] = useState();
   const navigate = useNavigate();
@@ -17,7 +18,17 @@ export default function Home() {
         </Col>
         <Col md={2} />
       </Row>
-
+      
+<div class="view">
+  <div class="plane main">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</div>
       <Row className="p-0 mt-3 m-0">
         <Col md={2} xs={0} sm={0}></Col>
         <Col md={8}>
@@ -31,6 +42,7 @@ export default function Home() {
                   <ChevronDown size={27} color="grey" />{" "}
                 </div>
                 <div>
+                  
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
