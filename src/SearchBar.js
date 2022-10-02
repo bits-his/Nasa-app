@@ -37,7 +37,7 @@ export default function SearchBar({ results = [], setResults }) {
           });
         setResults(arr);
       });
-  },[form.search]);
+  },[form,setResults]);
   useEffect(()=>{
     handleSubmit()
   },[handleSubmit])
