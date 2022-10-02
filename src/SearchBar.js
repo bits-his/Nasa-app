@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 // import { Search } from "react-feather";
-import { Button, Input, InputGroup } from "reactstrap";
+import { Button, Input, InputGroup, Spinner } from "reactstrap";
 import "./search.css";
 
 export default function SearchBar({ results = [], setResults }) {
@@ -35,6 +35,7 @@ export default function SearchBar({ results = [], setResults }) {
           data.forEach((item, index) => {
             arr.push({ ...item, vote: index });
           });
+          setIsLoading(false)
         setResults(arr);
       });
   },[form,setResults]);
@@ -44,6 +45,7 @@ export default function SearchBar({ results = [], setResults }) {
 
   return (
     <div>
+    
       <InputGroup>
         {/* <Button style={{ backgroundColor: "white" }}>
           <Search color="grey" />
@@ -59,6 +61,12 @@ export default function SearchBar({ results = [], setResults }) {
           Search
         </Button>
       </InputGroup>
+      {isLoading && <Spinner
+  className="m-5"
+  color="primary"
+>
+  Loading...
+</Spinner>}
     </div>
   );
 }

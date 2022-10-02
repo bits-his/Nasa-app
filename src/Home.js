@@ -1,39 +1,15 @@
 import React, { useState } from "react";
-import { Bookmark, ChevronDown, ChevronUp, Mic } from "react-feather";
+import { Bookmark, ChevronDown, ChevronUp } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import "./home.css";
 import SearchBar from "./SearchBar";
 export default function Home() {
   const [results, setResults] = useState();
- const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <>
-      <div id="header">
-        <nav>
-          <label className="logo">Space Gateway</label>
-          <ul>
-          <li>
-              <span onClick={()=>navigate("/publish")} style={{ textDecoration: "none" }}>
-                Publish
-              </span>
-            </li>
-            
-            <li>
-              <span onClick={()=>navigate("/sign-up")} style={{ textDecoration: "none" }}>
-                Sign Up
-                <i className="fas fa-caret-down"></i>
-              </span>
-              <ul></ul>
-            </li>
-            <li>
-              <span onClick={()=>navigate("/login")} style={{ textDecoration: "none" }}>
-                Login
-              </span>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <HeaderSpace navigate={navigate} />
       <Row className="m-0 p-0">
         <Col md={2} />
         <Col md={8}>
@@ -48,24 +24,21 @@ export default function Home() {
           {results &&
             results.map((item, index) => (
               <div className="d-flex">
-                
                 {/* <div className="col-md-8 col-xs-9 col-sm-9"> */}
-                <div style={{marginRight:'5px'}} >
-
-                    <ChevronUp size={27} color="grey" />
-                  
-                  <div style={{marginLeft:'7px'}}>{item.vote}</div>
-                 
-                    <ChevronDown size={27} color="grey" />{" "}
-                 
-                  
-
-                  </div>
-                  <div>
+                <div style={{ marginRight: "5px" }}>
+                  <ChevronUp size={27} color="grey" />
+                  <div style={{ marginLeft: "7px" }}>{item.vote}</div>
+                  <ChevronDown size={27} color="grey" />{" "}
+                </div>
+                <div>
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0" ><a href={item.link} target="_blank">{item._source.title}</a></h4>
+                  <h4 className="sub-heading m-0" >
+                    <a  href={item._source.link} target="_blank">{item._source.title}</a>
+                    <Bookmark size={20} color="grey"  />
+                    
+                  </h4>
                   {/* ⭐⭐⭐ */}
                   <p>
                     <span style={{ color: "rgb(92, 89, 89)" }}>
@@ -75,11 +48,6 @@ export default function Home() {
                   </p>
                   <br />
                 </div>
-                <div style={{marginLeft:'5px'}}>
-                <Bookmark size={20} color="grey" />
-                <div style={{marginLeft:'3px',color:"white"}}>{item.vote}</div>
-                <Mic size={20} color="grey" />
-                </div>
               </div>
             ))}
         </Col>
@@ -88,3 +56,60 @@ export default function Home() {
     </>
   );
 }
+
+export const HeaderSpace = ({ navigate  }) => {
+  return (
+    <>
+      <div id="header">
+        <nav>
+          <label className="logo">
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                navigate("/live");
+              }}
+            >
+              Space Gateway
+            </div>
+          </label>
+          <ul>
+          <li>
+              <span
+                onClick={() => navigate("/publish")}
+                style={{ textDecoration: "none" }}
+              >
+                Live stream
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => navigate("/publish")}
+                style={{ textDecoration: "none" }}
+              >
+                Publish
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => navigate("/sign-up")}
+                style={{ textDecoration: "none" }}
+              >
+                Sign Up
+                <i className="fas fa-caret-down"></i>
+              </span>
+              <ul></ul>
+            </li>
+            <li>
+              <span
+                onClick={() => navigate("/login")}
+                style={{ textDecoration: "none" }}
+              >
+                Login
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </>
+  );
+};
