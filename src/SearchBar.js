@@ -38,11 +38,10 @@ export default function SearchBar({ results = [], setResults }) {
           setIsLoading(false)
         setResults(arr);
       });
-  },[form,setResults]);
+  },[form, setResults]);
   useEffect(()=>{
     handleSubmit()
   },[handleSubmit])
-
   return (
     <div>
     

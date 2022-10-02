@@ -2,6 +2,7 @@
 import {  useRoutes } from "react-router-dom";
 import Eley from "../Form";
 import Home from "../Home";
+import { LiveStream } from "../livestream";
 import SingIn from "../Login";
 import Profile from "../profile";
 import SignUp from "../Signup";
@@ -12,7 +13,7 @@ function AppNavigation() {
     { path: "/login", element: <SingIn /> },
     { path: '/sign-up', element: <SignUp /> },
     { path: '/publish', element: <Eley /> },
-    { path: '/profile', element: <Profile /> },
+    { path: '/live', element: <LiveStream /> },
     {
       path: "app",
       element: <Home />,

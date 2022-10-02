@@ -66,16 +66,16 @@ export const HeaderSpace = ({ navigate  }) => {
             <div
               style={{ cursor: "pointer" }}
               onClick={() => {
-                navigate("/live");
+                navigate("/");
               }}
             >
               Space Gateway
             </div>
           </label>
           <ul>
-          <li>
+            <li>
               <span
-                onClick={() => navigate("/publish")}
+                onClick={() => navigate("/live")}
                 style={{ textDecoration: "none" }}
               >
                 Live stream

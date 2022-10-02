@@ -26,31 +26,48 @@ export default function Eley() {
 
   const handleChange = ({ target: { name, value } }) =>
     setForm((p) => ({ ...p, [name]: value }));
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleAdd = () => {
     setForm(_form);
     console.log(form);
   };
   return (
     <div>
-         <div id="header">
+      <div id="header">
         <nav>
           <label onClick={()=>navigate("/")} className="logo" style={{cursor:"pointer"}}>Space Gateway</label>
           <ul>
           <li>
-              <span onClick={()=>navigate("/publish")} style={{ textDecoration: "none" }}>
+              <span
+                onClick={() => navigate("/live")}
+                style={{ textDecoration: "none" }}
+              >
+                Live stream
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => navigate("/publish")}
+                style={{ textDecoration: "none" }}
+              >
                 Publish
               </span>
             </li>
             <li>
-              <span onClick={()=>navigate("/sign-up")} style={{ textDecoration: "none" }}>
+              <span
+                onClick={() => navigate("/sign-up")}
+                style={{ textDecoration: "none" }}
+              >
                 Sign Up
                 <i className="fas fa-caret-down"></i>
               </span>
               <ul></ul>
             </li>
             <li>
-              <span onClick={()=>navigate("/login")} style={{ textDecoration: "none" }}>
+              <span
+                onClick={() => navigate("/login")}
+                style={{ textDecoration: "none" }}
+              >
                 Login
               </span>
             </li>
