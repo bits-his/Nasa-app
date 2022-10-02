@@ -34,8 +34,10 @@ export default function Home() {
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0">
-                    <Bookmark size={20} color="grey" />
+                  <h4 className="sub-heading m-0" onClick={()=>{
+                       window.location.replace(item._source.link);
+                    }}>
+                    <Bookmark size={20} color="grey"  />
                     {item._source.title}
                   </h4>
                   {/* ⭐⭐⭐ */}
@@ -65,13 +67,21 @@ export const HeaderSpace = ({ navigate  }) => {
             <div
               style={{ cursor: "pointer" }}
               onClick={() => {
-                navigate("/");
+                navigate("/live");
               }}
             >
               Space Gateway
             </div>
           </label>
           <ul>
+          <li>
+              <span
+                onClick={() => navigate("/publish")}
+                style={{ textDecoration: "none" }}
+              >
+                Live stream
+              </span>
+            </li>
             <li>
               <span
                 onClick={() => navigate("/publish")}
