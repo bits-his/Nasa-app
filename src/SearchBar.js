@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 // import { Search } from "react-feather";
 import { Button, Input, InputGroup } from "reactstrap";
 import "./search.css";
@@ -16,7 +16,7 @@ export default function SearchBar({ results = [], setResults }) {
   const handleChange = ({ target: { name, value } }) => {
     setForm((p) => ({ ...p, [name]: value }));
   };
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     setIsLoading(true);
     console.log(form);
     fetch(
@@ -37,10 +37,11 @@ export default function SearchBar({ results = [], setResults }) {
           });
         setResults(arr);
       });
-  };
+  },[form.search]);
   useEffect(()=>{
     handleSubmit()
-  })
+  },[handleSubmit])
+
   return (
     <div>
       <InputGroup>
