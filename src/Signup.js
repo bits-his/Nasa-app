@@ -33,7 +33,7 @@ function SignUp() {
       .then((raw) => raw.json())
       .then(() => {
         alert("Account created successfully");
-        navigate("/");
+        navigate("/login");
       })
 
       .then((err) => console.log(err));
@@ -57,9 +57,9 @@ function SignUp() {
   return (
     <div className="new">
       <Row className="m-0 p-0">
-        <Col md={4}></Col>
-        <Col md={4}>
-          <div className="body bodys">
+        <Col md={2}></Col>
+        <Col md={8}>
+          <div className="p-3">
             <Card className="p-5 m-1 signin-card" style={{ borderRadius: 10 }}>
               <center>
                 <h3 className="signup">Sign Up</h3>
@@ -174,20 +174,20 @@ function SignUp() {
                       Already have an account?
                       <span
                         style={{ fontSize: 12, cursor: "pointer" }}
-                        // onClick={() => navigate("/Signin")}
+                        onClick={() => navigate("/login")}
+                        className="sub-heading m-0"
                       >
-                        Logn In
+                        Login here!
                       </span>{" "}
-                      here!
+                      
                     </p>
                   </center>
                 </Col>
-                <Col md={1}></Col>
               </Row>
             </Card>
           </div>
         </Col>
-        <Col md={4}></Col>
+        <Col md={2}></Col>
       </Row>
     </div>
   );

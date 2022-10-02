@@ -35,7 +35,7 @@ const navigate = useNavigate()
     <div>
          <div id="header">
         <nav>
-          <label className="logo">Space Gateway</label>
+          <label className="logo" onClick={()=>navigate("/")} >Space Gateway </label>
           <ul>
           <li>
               <span onClick={()=>navigate("/publish")} style={{ textDecoration: "none" }}>
