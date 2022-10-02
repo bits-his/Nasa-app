@@ -30,7 +30,9 @@ export default function Home() {
         <Col md={2}>
           <Accordion open={open} toggle={toggle}>
             <AccordionItem>
-              <AccordionHeader targetId="1" style={{fontSize: '3px'}}>NASA RESOURCES</AccordionHeader>
+              <AccordionHeader targetId="1" style={{ fontSize: "3px" }}>
+                NASA RESOURCES
+              </AccordionHeader>
               <AccordionBody accordionId="1">
                 <strong>This is the first item&#39;s accordion body.</strong>
                 You can modify any of this with custom CSS or overriding our
@@ -174,10 +176,15 @@ export default function Home() {
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0" >
-                    <a  href={item._source.link} target="_blank" rel="noreferrer">{item._source.title}</a>
-                    <Bookmark size={20} color="grey"  />
-                    
+                  <h4 className="sub-heading m-0">
+                    <a
+                      href={item._source.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item._source.title}
+                    </a>
+                    <Bookmark size={20} color="grey" />
                   </h4>
                   {/* ⭐⭐⭐ */}
                   <p>
@@ -193,11 +200,21 @@ export default function Home() {
         </Col>
         <Col md={2} xs={0} sm={0}></Col>
       </Row>
+      <div class="view">
+        <div class="plane main">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
     </>
   );
 }
 
-export const HeaderSpace = ({ navigate  }) => {
+export const HeaderSpace = ({ navigate }) => {
   return (
     <>
       <div id="header">
