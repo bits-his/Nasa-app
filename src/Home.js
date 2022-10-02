@@ -1,26 +1,32 @@
 import React, { useState } from "react";
 import { Bookmark, ChevronDown, ChevronUp } from "react-feather";
+import { useNavigate } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import "./home.css";
 import SearchBar from "./SearchBar";
 export default function Home() {
   const [results, setResults] = useState();
-
+ const navigate = useNavigate()
   return (
     <>
       <div id="header">
         <nav>
           <label className="logo">Space Gateway</label>
           <ul>
+          <li>
+              <span onClick={()=>navigate("/publish")} style={{ textDecoration: "none" }}>
+                Publish
+              </span>
+            </li>
             <li>
-              <span href="#" style={{ textDecoration: "none" }}>
+              <span onClick={()=>navigate("/sign-up")} style={{ textDecoration: "none" }}>
                 Sign Up
                 <i className="fas fa-caret-down"></i>
               </span>
               <ul></ul>
             </li>
             <li>
-              <span href="#" style={{ textDecoration: "none" }}>
+              <span onClick={()=>navigate("/login")} style={{ textDecoration: "none" }}>
                 Login
               </span>
             </li>
