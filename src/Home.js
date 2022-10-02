@@ -28,7 +28,7 @@ export default function Home() {
       <HeaderSpace navigate={navigate} />
       <Row className="m-0 p-0">
         <Col md={2}>
-          <h3>Training Catolog</h3>
+          <h6 >Training Catolog</h6>
           <Accordion open={open} toggle={toggle}>
             <AccordionItem>
               <AccordionHeader targetId="1" style={{ fontSize: "3px" }}>
