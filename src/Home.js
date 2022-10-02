@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Bookmark, ChevronDown, ChevronUp } from "react-feather";
+import { Link } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import "./home.css";
 import SearchBar from "./SearchBar";
@@ -57,7 +58,14 @@ export default function Home() {
                   <p style={{ fontSize: "11px" }} className="m-0">
                     {item._source.link}
                   </p>
-                  <h4 className="sub-heading m-0">{item._source.title}</h4>
+                  <h4
+                    className="sub-heading m-0"
+                    onClick={() => {
+                      window.location.replace(item._source.link);
+                    }}
+                  >
+                    {item._source.title}
+                  </h4>
                   {/* ⭐⭐⭐ */}
                   <p>
                     <span style={{ color: "rgb(92, 89, 89)" }}>
