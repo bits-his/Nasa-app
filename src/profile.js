@@ -4,7 +4,7 @@ import { Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import { Button, Card, Col,  Row } from "reactstrap";
 import { HeaderSpace } from "./HeaderSpace";
-import { HeadNavbar } from "./HeadNavbar";
+// import { HeadNavbar } from "./HeadNavbar";
 import "./sigup.css";
 import User from "./user.png"
 import "./wow.css"
