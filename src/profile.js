@@ -4,6 +4,7 @@ import { Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import { Button, Card, Col,  Row } from "reactstrap";
 import { HeaderSpace } from "./HeaderSpace";
+import { HeadNavbar } from "./HeadNavbar";
 import "./sigup.css";
 import User from "./user.png"
 import "./wow.css"
@@ -75,7 +76,7 @@ function SignUp() {
       <Row className="m-0 p-0">
         <Col md={4}></Col>
         <Col md={4}>
-          <div className="body bodys">
+          <div className="bodys">
             <Card className="p-5 m-1 signin-card" style={{ borderRadius: 10 }}>
               <center>
               <Row className="m-0 p-0">

@@ -1,11 +1,15 @@
 import React from "react";
+import SideBar from "./SideBar";
 
 export const HeaderSpace = ({ navigate }) => { 
   return (
     <>
-      <div id="header">
+      <div 
+        className="header"
+        id="header"
+        >
         <nav>
-          <label className="logo">
+          <label className="space-gateway ">
             <div
               style={{ cursor: "pointer" }}
               onClick={() => {
@@ -63,6 +67,9 @@ export const HeaderSpace = ({ navigate }) => {
                 Login
               </span>
             </li>
+            <div className="nav-toggle">
+              <SideBar />
+            </div>
           </ul>
         </nav>
       </div>

@@ -22,9 +22,7 @@ export function HeadNavbar (args) {
   return (
     <div>
       <Navbar {...args}>
-        <NavbarBrand 
-            
-        >reactstrap</NavbarBrand>
+        <NavbarBrand href="/">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>

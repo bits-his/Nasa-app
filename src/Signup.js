@@ -57,7 +57,7 @@ function SignUp() {
     },
   ];
   return (
-    <div className="new">
+    <div className="sign-up">
       <HeaderSpace navigate={navigate} />
 
       <Row className="m-0 p-0">

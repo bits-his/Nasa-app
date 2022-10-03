@@ -10,6 +10,7 @@ import {
   Label,
   Row,
 } from "reactstrap";
+import { HeaderSpace } from "./HeaderSpace";
 import "./home.css";
 export default function Eley() {
   const _form = {
@@ -33,7 +34,9 @@ export default function Eley() {
   };
   return (
     <div>
-      <div id="header">
+      <HeaderSpace navigate={navigate} />
+
+      {/* <div id="header">
         <nav>
           <label onClick={()=>navigate("/")} className="logo" style={{cursor:"pointer"}}>Space Gateway</label>
           <ul>
@@ -73,7 +76,7 @@ export default function Eley() {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
       <Container className="mt-1">
         <Card>
           <CardBody>

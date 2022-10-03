@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Bookmark, ChevronDown, ChevronUp } from "react-feather";
+import { ArrowLeft, ArrowRight, Bookmark, ChevronDown, ChevronUp, Send } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import {
   Col,
@@ -12,6 +12,7 @@ import {
 import SearchBar from "./SearchBar";
 import "./homeBAckground.css";
 import { HeaderSpace } from "./HeaderSpace";
+// import { HeadNavbar } from "./HeadNavbar";
 export default function Home() {
   const [results, setResults] = useState();
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ export default function Home() {
   };
   return (
     <>
+    {/* <HeadNavbar /> */}
       <HeaderSpace navigate={navigate} />
       <Row className="m-0 p-0">
         <Col md={2}>
@@ -35,15 +37,21 @@ export default function Home() {
                 NASA RESOURCES
               </AccordionHeader>
               <AccordionBody accordionId="1">
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset" target="_blank" rel="noreferrer">
                       <small>NASA Applied Remote Sensing Training (ARSET) Program</small></a>
                 </li>
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://eodashboard.org/" target="_blank" rel="noreferrer">
                       <small>EO Dashboard</small></a>
                 </li>
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://eo-college.org/courses/" target="_blank" rel="noreferrer">
                       <small>EO College Courses</small></a>
                 </li>
@@ -54,7 +62,9 @@ export default function Home() {
                 EUROPEAN SPACE AGENCY
               </AccordionHeader>
               <AccordionBody accordionId="2">
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://www.un-spider.org/" target="_blank" rel="noreferrer">
                       <small>The United Nations Platform for Space-based Information for Disaster Management and Emergency Response (UN-SPIDER) Knowledge Portal</small></a>
                 </li>
@@ -65,11 +75,15 @@ export default function Home() {
                 COMISIÓN NACIONAL...
               </AccordionHeader>
               <AccordionBody accordionId="3">
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://www.argentina.gob.ar/ciencia/conae/unidad-educacion/cursos-y-capacitaciones" target="_blank" rel="noreferrer">
                       <small>Massive Training Unit</small></a>
                 </li>
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://ig.conae.unc.edu.ar/estudiar-en-el-ig/" target="_blank" rel="noreferrer">
                       <small>Instituto de Altos Estudios Espaciales Mario Gulich</small></a>
                 </li>
@@ -80,7 +94,9 @@ export default function Home() {
                 CANADIAN SPACE AGENCY
               </AccordionHeader>
               <AccordionBody accordionId="4">
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="http://www.dgi.inpe.br/DIDGI" target="_blank" rel="noreferrer">
                       <small>Remote Sensing Tutorial</small></a>
                 </li>
@@ -91,15 +107,21 @@ export default function Home() {
                 BRAZILIAN SPACE AGENCY
               </AccordionHeader>
               <AccordionBody accordionId="6">
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/9309" target="_blank" rel="noreferrer">
                       <small>National Institute for Space Research (INPE) EO Coordination</small></a>
                 </li>
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://eo-college.org/courses/winter-water-warming-canadian-sar-applications/" target="_blank" rel="noreferrer">
                       <small>Winter-Water-Warming: Canadian Synthetic Aperture Radar Applications</small></a>
                 </li>
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://github.com/asc-csa" target="_blank" rel="noreferrer">
                       <small>CSA GitHub with EO Scripts and Tutorials</small></a>
                 </li>
@@ -110,11 +132,15 @@ export default function Home() {
                 OTHER EXAMPLE RESOURCES
               </AccordionHeader>
               <AccordionBody accordionId="7">
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://www.un-spider.org/" target="_blank" rel="noreferrer">
                       <small>The United Nations Platform for Space-based Information for Disaster Management and Emergency Response (UN-SPIDER) Knowledge Portal</small></a>
                 </li>
-                <li>--
+                <li><Send style={{
+                  padding: 6
+                }} />
                     <a href="https://public.wmo.int/en/resources/training/wmolearn" target="_blank" rel="noreferrer">
                       <small>WMOLearn, a World Meteorological Organization (WMO) resource</small></a>
                 </li>

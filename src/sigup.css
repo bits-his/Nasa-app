@@ -1,5 +1,5 @@
 .bodys::before{
-    content: '';
+    /* content: ''; */
     position: absolute;
     top: 0;
     right: 0;
@@ -29,8 +29,8 @@
 	/* padding-left: 10rem; */
 	/* padding-right: 20rem; */
 	padding: 0rem;
-	width: 30rem;
-	height: auto;
+	/* width: 30rem; */
+	/* height: auto; */
 }
 .new{
     /* z-index: -1; */
@@ -42,4 +42,16 @@
       top: 0px;
       left: 0px;
       width: 100%;
+      height: 100%;
+}
+.sign-up{
+    background-image: url(https://phantom-marca.unidadeditorial.es/70228d12abae7a8e9afee7a18198736c/resize/1320/f/jpg/assets/multimedia/imagenes/2022/03/29/16485483154853.jpg);
+      clear: left;
+      background-position: left center;
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      /* height: 100%; */
 }
