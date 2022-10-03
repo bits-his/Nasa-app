@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { HeaderSpace } from "./Home";
-import live from "./livestreamimage.jpg";
+// import live from "./livestreamimage.jpg";
 import { JitsiMeeting } from "@jitsi/react-sdk";
 
 export const LiveStream = () => {
