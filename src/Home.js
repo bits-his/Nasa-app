@@ -15,7 +15,7 @@ import "./homeBAckground.css";
 export default function Home() {
   const [results, setResults] = useState();
   const navigate = useNavigate();
-  const [open, setOpen] = useState("1");
+  const [open, setOpen] = useState("0");
   const toggle = (id) => {
     if (open === id) {
       setOpen();

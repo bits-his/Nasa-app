@@ -48,11 +48,11 @@ export default function SearchBar({ results = [], setResults }) {
           <Search color="grey" />
         </Button> */}
         <Input
-          placeholder="Sear For Space..."
+          placeholder="Sear For Space..... ..."
           name="search"
           value={form.search === "EARTH CRUST" ? "":form.search}
           onChange={handleChange}
-          className="col-md-12"
+          className="search col-md-12"
         />
         <Button isLoading={isLoading} style={{ backgroundColor: "black" }} onClick={handleSubmit}>
           Search
