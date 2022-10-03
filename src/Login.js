@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Card, Col, Input, Label, Row } from "reactstrap";
-import { HeaderSpace } from "./Home";
+import { HeaderSpace } from "./HeaderSpace";
 import "./sigup.css";
 
 function SingIn() {

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Mail } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import { Button, Card, Col,  Row } from "reactstrap";
+import { HeaderSpace } from "./HeaderSpace";
 import "./sigup.css";
 import User from "./user.png"
 import "./wow.css"
@@ -70,6 +71,7 @@ function SignUp() {
   }
   return (
     <div className="bg-dark">
+      <HeaderSpace navigate={navigate} />
       <Row className="m-0 p-0">
         <Col md={4}></Col>
         <Col md={4}>

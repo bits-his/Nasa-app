@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { useNavigate } from "react-router-dom";
 import { Button, Card, Col, Input, Label, Row } from "reactstrap";
+import { HeaderSpace } from "./HeaderSpace";
 import "./sigup.css";
 
 function SignUp() {
@@ -57,6 +58,8 @@ function SignUp() {
   ];
   return (
     <div className="new">
+      <HeaderSpace navigate={navigate} />
+
       <Row className="m-0 p-0">
         <Col md={2}></Col>
         <Col md={8}>

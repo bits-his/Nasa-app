@@ -37,9 +37,9 @@
     background-image: url(https://phantom-marca.unidadeditorial.es/70228d12abae7a8e9afee7a18198736c/resize/1320/f/jpg/assets/multimedia/imagenes/2022/03/29/16485483154853.jpg);
       clear: left;
       background-position: left center;
+      background-size: cover;
       position: absolute;
       top: 0px;
       left: 0px;
       width: 100%;
-      height:  100vh;
 }

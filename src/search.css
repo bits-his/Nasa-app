@@ -18,12 +18,26 @@
 .search:focus{
     outline: none;
 }
-.search .form-control:focus,
-.search .form-control:active
+.search-for-space .form-control:hover,
+.search-for-space .form-control:focus,
+.search-for-space .form-control:active
 {
-    /* color: blue;
-    border: 4px solid black; */
-    outline: none;
-    border: none;
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
 }
 
+@media screen and (max-width: 376px) {
+  nav .live-stream{
+    /* width: 20%; */
+    /* background-color: aliceblue; */
+    display: none;
+  }
+.search-for{
+    margin-top: 10px;
+}
+.logo{
+    margin-left: 100px;
+}
+
+}
