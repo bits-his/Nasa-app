@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { HeaderSpace } from "./Home";
 // import live from "./livestreamimage.jpg";
 import { JitsiMeeting } from "@jitsi/react-sdk";
+import { Input } from "reactstrap";
 
 export const LiveStream = () => {
   // const clientId =
@@ -14,9 +15,10 @@ export const LiveStream = () => {
       <HeaderSpace navigate={navigate} />
       <center className="p-0">
         {/* <img className="h-50 w-75" src={live} alt="logo" /> */}
+        {/* <Input type="text"/> */}
         <JitsiMeeting
           // appId={"YOUR_APP_ID"}
-          roomName={"YOUR_ROOM_NAME"}
+          roomName={"Space Gateway"}
           // useStaging={true}
           configOverwrite={{
             startWithAudioMuted: true,
