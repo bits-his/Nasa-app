@@ -33,7 +33,8 @@ function SignUp() {
       .then((raw) => raw.json())
       .then(() => {
         alert("Account created successfully");
-        navigate("/login");
+        navigate("/profile");
+        // navigate("/login");
       })
 
       .then((err) => console.log(err));

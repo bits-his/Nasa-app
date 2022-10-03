@@ -29,7 +29,7 @@ function SingIn() {
       .then((data) => {
         localStorage.setItem("@@_data", JSON.stringify(data));
         alert("sucess");
-        navigate("/");
+        navigate("/profile");
       })
 
       .then((err) => console.log(err));
@@ -37,7 +37,7 @@ function SingIn() {
   };
   return (
     <div className="new">
-      <HeaderSpace />
+      <HeaderSpace navigate={navigate}/>
       <Row className="p-0 m-0">
         <Col md={4}></Col>
         <Col md={4} className="mt-2">

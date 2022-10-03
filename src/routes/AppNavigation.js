@@ -4,6 +4,7 @@ import Eley from "../Form";
 import Home from "../Home";
 import { LiveStream } from "../livestream";
 import SingIn from "../Login";
+import Profile from "../profile";
 import SignUp from "../Signup";
 
 function AppNavigation() {
@@ -13,6 +14,7 @@ function AppNavigation() {
     { path: '/sign-up', element: <SignUp /> },
     { path: '/publish', element: <Eley /> },
     { path: '/live', element: <LiveStream /> },
+    { path: '/profile', element: <Profile /> },
     {
       path: "app",
       element: <Home />,

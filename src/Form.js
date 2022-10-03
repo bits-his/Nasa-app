@@ -35,9 +35,7 @@ export default function Eley() {
     <div>
       <div id="header">
         <nav>
-          <label className="logo" >
-            Space Gateway{" "}
-          </label>
+          <label onClick={()=>navigate("/")} className="logo" style={{cursor:"pointer"}}>Space Gateway</label>
           <ul>
           <li>
               <span
