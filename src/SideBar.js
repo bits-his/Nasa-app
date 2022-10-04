@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AlignLeft, Users } from 'react-feather'
+import { AlignLeft } from 'react-feather'
 import { useNavigate } from 'react-router-dom';
 import { Offcanvas, OffcanvasBody, OffcanvasHeader } from 'reactstrap'
 

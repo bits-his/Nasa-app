@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowLeft, ArrowRight, Bookmark, ChevronDown, ChevronUp, Send } from "react-feather";
+import {  Bookmark, ChevronDown, ChevronUp, Send } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import {
   Col,
@@ -168,12 +168,10 @@ export default function Home() {
                       </p>
                       <h4
                         className="sub-heading m-0"
-                        onClick={() => {
-                          window.location.replace(item._source.link);
-                        }}
                       >
                         <Bookmark size={20} color="grey" />
-                        {item._source.title}
+                        <a href={item._source.link} target="_blank" rel="noreferrer">{item._source.title}</a>
+                        
                       </h4>
                       {/* ⭐⭐⭐ */}
                       <p>
